@@ -12,23 +12,18 @@ namespace CallCenterSimulator
 {
     public partial class MainForm : Form
     {
-        private Categoria[] categorias = 
-        {
-            new Categoria("Devoluciones", 1),
-            new Categoria("Exportaciones", 2),
-            new Categoria("Entregas", 1),
-            new Categoria("Aclaraciones", 1)
-        };
+        private Random categorySelector;
+        private Random agentSelector;
 
-        private Agente[] agentes =
-        {
-            new Agente(1, 1),
-            new Agente(2, 1),
-            new Agente(3, 1),
-            new Agente(4, 2)
-        };
+        private Categoria[] categorias;
+
+        private Agente[] agentes;
 
         private Queue<Llamada> llamadas;
+
+        private List<Llamada> llamadasAtendidas;
+
+        private int callsCounter = 0;
 
         public MainForm()
         {
@@ -38,13 +33,36 @@ namespace CallCenterSimulator
         private void SimulateButton_Click(object sender, EventArgs e)
         {
             llamadas = new Queue<Llamada>();
+            llamadasAtendidas = new List<Llamada>();
+
+            categorias = new Categoria[4];
+            categorias[0] =
+                new Categoria("Devoluciones", 1, DevoulcionesCheckBox.Checked);
+            categorias[1] =
+                new Categoria("Exportaciones", 2, ExportacionesCheckBox.Checked);
+            categorias[2] =
+                new Categoria("Entregas", 1, EntregasCheckBox.Enabled);
+            categorias[3] =
+                new Categoria("Aclaraciones", 1, AclaracionesCheckBox.Checked);
+
+            agentes = new Agente[4];
+
+            agentes[0] = new Agente(1, 1, Agente1CheckBox.Checked);
+            agentes[1] = new Agente(2, 1, Agente2CheckBox.Checked);
+            agentes[2] = new Agente(3, 1, Agente3CheckBox.Checked);
+            agentes[3] = new Agente(4, 2, Agente4CheckBox.Checked);
+
+            int totalLlamadas = (int)NumberOfCallsNum.Value;
+
+            while (callsCounter <= totalLlamadas)
+            {
+
+            }
         }
 
         private void Call()
         {
 
-            var llamada = new Llamada()
-            llamadas.Enqueue(llamada);
         }
 
         private void AttendCall()

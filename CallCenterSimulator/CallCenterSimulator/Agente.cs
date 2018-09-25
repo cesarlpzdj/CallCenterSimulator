@@ -10,10 +10,13 @@
 
         public Llamada Llamada { get; set; }
 
-        public Agente(int id, int nivel)
+        public bool Incluir { get; set; }
+
+        public Agente(int id, int nivel, bool incluir)
         {
             Id = id;
             Nivel = nivel;
+            Incluir = incluir;
         }
 
         public void AtenderLlamada(Llamada llamada)
