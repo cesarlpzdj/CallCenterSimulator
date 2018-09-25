@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallCenterSimulator", "CallCenterSimulator\CallCenterSimulator.csproj", "{6B84BBB3-7974-4E21-A5E4-3E16CDD5FE13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B84BBB3-7974-4E21-A5E4-3E16CDD5FE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B84BBB3-7974-4E21-A5E4-3E16CDD5FE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B84BBB3-7974-4E21-A5E4-3E16CDD5FE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B84BBB3-7974-4E21-A5E4-3E16CDD5FE13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69422AE7-2CD1-47EF-AE8B-3A3BD96E4258}
+	EndGlobalSection
+EndGlobal

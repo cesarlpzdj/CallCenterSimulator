@@ -1,0 +1,10 @@
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.exe.config
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.exe
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.pdb
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.csprojAssemblyReference.cache
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.Properties.Resources.resources
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.csproj.GenerateResource.cache
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.csproj.CoreCompileInputs.cache
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.exe
+c:\users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.pdb
+c:\Users\luis angel\source\repos\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.MainForm.resources
