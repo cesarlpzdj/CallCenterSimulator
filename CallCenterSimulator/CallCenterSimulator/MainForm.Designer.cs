@@ -133,7 +133,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Size = new System.Drawing.Size(451, 561);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parámetros";
             // 
@@ -144,7 +144,7 @@
             this.ExportarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExportarButton.Name = "ExportarButton";
             this.ExportarButton.Size = new System.Drawing.Size(100, 28);
-            this.ExportarButton.TabIndex = 28;
+            this.ExportarButton.TabIndex = 23;
             this.ExportarButton.Text = "Exportar...";
             this.ExportarButton.UseVisualStyleBackColor = true;
             // 
@@ -155,7 +155,7 @@
             this.ReiniciarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ReiniciarButton.Name = "ReiniciarButton";
             this.ReiniciarButton.Size = new System.Drawing.Size(100, 28);
-            this.ReiniciarButton.TabIndex = 27;
+            this.ReiniciarButton.TabIndex = 24;
             this.ReiniciarButton.Text = "Reiniciar";
             this.ReiniciarButton.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +166,7 @@
             this.SimulateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SimulateButton.Name = "SimulateButton";
             this.SimulateButton.Size = new System.Drawing.Size(100, 28);
-            this.SimulateButton.TabIndex = 26;
+            this.SimulateButton.TabIndex = 25;
             this.SimulateButton.Text = "Simular";
             this.SimulateButton.UseVisualStyleBackColor = true;
             this.SimulateButton.Click += new System.EventHandler(this.SimulateButton_Click);
@@ -174,44 +174,52 @@
             // Agente4CheckBox
             // 
             this.Agente4CheckBox.AutoSize = true;
+            this.Agente4CheckBox.Checked = true;
+            this.Agente4CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Agente4CheckBox.Location = new System.Drawing.Point(172, 454);
             this.Agente4CheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Agente4CheckBox.Name = "Agente4CheckBox";
             this.Agente4CheckBox.Size = new System.Drawing.Size(82, 21);
-            this.Agente4CheckBox.TabIndex = 25;
+            this.Agente4CheckBox.TabIndex = 22;
             this.Agente4CheckBox.Text = "Gerente";
             this.Agente4CheckBox.UseVisualStyleBackColor = true;
             // 
             // Agente3CheckBox
             // 
             this.Agente3CheckBox.AutoSize = true;
+            this.Agente3CheckBox.Checked = true;
+            this.Agente3CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Agente3CheckBox.Location = new System.Drawing.Point(172, 426);
             this.Agente3CheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Agente3CheckBox.Name = "Agente3CheckBox";
             this.Agente3CheckBox.Size = new System.Drawing.Size(87, 21);
-            this.Agente3CheckBox.TabIndex = 24;
+            this.Agente3CheckBox.TabIndex = 21;
             this.Agente3CheckBox.Text = "Agente 3";
             this.Agente3CheckBox.UseVisualStyleBackColor = true;
             // 
             // Agente2CheckBox
             // 
             this.Agente2CheckBox.AutoSize = true;
+            this.Agente2CheckBox.Checked = true;
+            this.Agente2CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Agente2CheckBox.Location = new System.Drawing.Point(172, 398);
             this.Agente2CheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Agente2CheckBox.Name = "Agente2CheckBox";
             this.Agente2CheckBox.Size = new System.Drawing.Size(87, 21);
-            this.Agente2CheckBox.TabIndex = 23;
+            this.Agente2CheckBox.TabIndex = 20;
             this.Agente2CheckBox.Text = "Agente 2";
             this.Agente2CheckBox.UseVisualStyleBackColor = true;
             // 
             // Agente1CheckBox
             // 
             this.Agente1CheckBox.AutoSize = true;
+            this.Agente1CheckBox.Checked = true;
+            this.Agente1CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Agente1CheckBox.Location = new System.Drawing.Point(172, 369);
             this.Agente1CheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Agente1CheckBox.Name = "Agente1CheckBox";
             this.Agente1CheckBox.Size = new System.Drawing.Size(87, 21);
-            this.Agente1CheckBox.TabIndex = 22;
+            this.Agente1CheckBox.TabIndex = 19;
             this.Agente1CheckBox.Text = "Agente 1";
             this.Agente1CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -221,7 +229,7 @@
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(137, 34);
-            this.label16.TabIndex = 21;
+            this.label16.TabIndex = 18;
             this.label16.Text = "Personas disponibles";
             // 
             // label15
@@ -231,7 +239,7 @@
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 17);
-            this.label15.TabIndex = 20;
+            this.label15.TabIndex = 9;
             this.label15.Text = "minutos";
             // 
             // WaitTimeNum
@@ -245,7 +253,7 @@
             0});
             this.WaitTimeNum.Name = "WaitTimeNum";
             this.WaitTimeNum.Size = new System.Drawing.Size(189, 22);
-            this.WaitTimeNum.TabIndex = 19;
+            this.WaitTimeNum.TabIndex = 8;
             this.WaitTimeNum.Value = new decimal(new int[] {
             1,
             0,
@@ -258,12 +266,14 @@
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(137, 36);
-            this.label14.TabIndex = 18;
+            this.label14.TabIndex = 7;
             this.label14.Text = "Tiempo máximo de espera";
             // 
             // AclaracionesCheckBox
             // 
             this.AclaracionesCheckBox.AutoSize = true;
+            this.AclaracionesCheckBox.Checked = true;
+            this.AclaracionesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AclaracionesCheckBox.Location = new System.Drawing.Point(172, 329);
             this.AclaracionesCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AclaracionesCheckBox.Name = "AclaracionesCheckBox";
@@ -275,6 +285,8 @@
             // EntregasCheckBox
             // 
             this.EntregasCheckBox.AutoSize = true;
+            this.EntregasCheckBox.Checked = true;
+            this.EntregasCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.EntregasCheckBox.Location = new System.Drawing.Point(172, 300);
             this.EntregasCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EntregasCheckBox.Name = "EntregasCheckBox";
@@ -286,6 +298,8 @@
             // ExportacionesCheckBox
             // 
             this.ExportacionesCheckBox.AutoSize = true;
+            this.ExportacionesCheckBox.Checked = true;
+            this.ExportacionesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ExportacionesCheckBox.Location = new System.Drawing.Point(172, 272);
             this.ExportacionesCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExportacionesCheckBox.Name = "ExportacionesCheckBox";
@@ -297,6 +311,8 @@
             // DevoulcionesCheckBox
             // 
             this.DevoulcionesCheckBox.AutoSize = true;
+            this.DevoulcionesCheckBox.Checked = true;
+            this.DevoulcionesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DevoulcionesCheckBox.Location = new System.Drawing.Point(172, 244);
             this.DevoulcionesCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DevoulcionesCheckBox.Name = "DevoulcionesCheckBox";
@@ -358,7 +374,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 6;
             this.label5.Text = "minutos";
             // 
             // label4
@@ -368,7 +384,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 17);
-            this.label4.TabIndex = 8;
+            this.label4.TabIndex = 4;
             this.label4.Text = "a";
             // 
             // DurationMaxNum
@@ -382,7 +398,7 @@
             0});
             this.DurationMaxNum.Name = "DurationMaxNum";
             this.DurationMaxNum.Size = new System.Drawing.Size(71, 22);
-            this.DurationMaxNum.TabIndex = 7;
+            this.DurationMaxNum.TabIndex = 5;
             this.DurationMaxNum.Value = new decimal(new int[] {
             1,
             0,
@@ -400,7 +416,7 @@
             0});
             this.DurationMinNum.Name = "DurationMinNum";
             this.DurationMinNum.Size = new System.Drawing.Size(71, 22);
-            this.DurationMinNum.TabIndex = 6;
+            this.DurationMinNum.TabIndex = 3;
             this.DurationMinNum.Value = new decimal(new int[] {
             1,
             0,
@@ -414,7 +430,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 17);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Rango de duración";
             // 
             // NumberOfCallsNum
@@ -428,7 +444,7 @@
             0});
             this.NumberOfCallsNum.Name = "NumberOfCallsNum";
             this.NumberOfCallsNum.Size = new System.Drawing.Size(189, 22);
-            this.NumberOfCallsNum.TabIndex = 4;
+            this.NumberOfCallsNum.TabIndex = 1;
             this.NumberOfCallsNum.Value = new decimal(new int[] {
             1,
             0,
@@ -442,7 +458,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 17);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Número de llamadas";
             // 
             // groupBox2
@@ -467,7 +483,7 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Size = new System.Drawing.Size(675, 561);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Diagrama";
             // 
@@ -478,7 +494,7 @@
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(66, 17);
-            this.label20.TabIndex = 19;
+            this.label20.TabIndex = 9;
             this.label20.Text = "Ocupado";
             // 
             // label19
@@ -488,7 +504,7 @@
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(66, 17);
-            this.label19.TabIndex = 18;
+            this.label19.TabIndex = 7;
             this.label19.Text = "Ocupado";
             // 
             // label18
@@ -498,7 +514,7 @@
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(66, 17);
-            this.label18.TabIndex = 17;
+            this.label18.TabIndex = 5;
             this.label18.Text = "Ocupado";
             // 
             // label17
@@ -508,7 +524,7 @@
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(66, 17);
-            this.label17.TabIndex = 16;
+            this.label17.TabIndex = 3;
             this.label17.Text = "Ocupado";
             // 
             // IncomingCallsLabel
@@ -518,7 +534,7 @@
             this.IncomingCallsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IncomingCallsLabel.Name = "IncomingCallsLabel";
             this.IncomingCallsLabel.Size = new System.Drawing.Size(142, 17);
-            this.IncomingCallsLabel.TabIndex = 15;
+            this.IncomingCallsLabel.TabIndex = 1;
             this.IncomingCallsLabel.Text = "x llamadas en espera";
             // 
             // label13
@@ -528,7 +544,7 @@
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 17);
-            this.label13.TabIndex = 14;
+            this.label13.TabIndex = 8;
             this.label13.Text = "Gerente";
             // 
             // label12
@@ -538,7 +554,7 @@
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 17);
-            this.label12.TabIndex = 13;
+            this.label12.TabIndex = 6;
             this.label12.Text = "Agente 3";
             // 
             // label11
@@ -548,7 +564,7 @@
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 17);
-            this.label11.TabIndex = 12;
+            this.label11.TabIndex = 4;
             this.label11.Text = "Agente 2";
             // 
             // label10
@@ -558,7 +574,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 17);
-            this.label10.TabIndex = 11;
+            this.label10.TabIndex = 2;
             this.label10.Text = "Agente 1";
             // 
             // pictureBox6
@@ -612,7 +628,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 17);
-            this.label9.TabIndex = 6;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Conmutador";
             // 
             // pictureBox2

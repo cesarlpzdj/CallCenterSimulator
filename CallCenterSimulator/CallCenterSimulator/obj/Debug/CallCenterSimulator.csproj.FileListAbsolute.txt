@@ -18,3 +18,13 @@ C:\Users\ceslopez\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCente
 C:\Users\ceslopez\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.exe.config
 C:\Users\ceslopez\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.exe
 C:\Users\ceslopez\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.pdb
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.exe.config
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.exe
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\bin\Debug\CallCenterSimulator.pdb
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.csprojAssemblyReference.cache
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.MainForm.resources
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.Properties.Resources.resources
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.csproj.GenerateResource.cache
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.csproj.CoreCompileInputs.cache
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.exe
+C:\Users\luis angel\Source\Repos\CallCenterSimulator\CallCenterSimulator\CallCenterSimulator\obj\Debug\CallCenterSimulator.pdb
