@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +21,7 @@ namespace CallCenterSimulator
 
         private List<Categoria> categorias;
         private List<Agente> agentes;
-        private List<Llamada> llamadasAtendidas;
+        private List<Agente> llamadasAtendidas;
         private Queue<Llamada> llamadas;
         private int callsCounter = 0;
 
@@ -39,7 +42,7 @@ namespace CallCenterSimulator
             SimulateButton.Enabled = false;
 
             llamadas = new Queue<Llamada>();
-            llamadasAtendidas = new List<Llamada>();
+            llamadasAtendidas = new List<Agente>();
 
             categorias = new List<Categoria>();
 
@@ -81,35 +84,73 @@ namespace CallCenterSimulator
 
             int totalLlamadas = (int)NumberOfCallsNum.Value;
 
+            worker.RunWorkerAsync();
+
             while (callsCounter <= totalLlamadas)
             {
                 int index = categorySelector.Next(0, categorias.Count);
                 var llamada = new Llamada(categorias[index], durationSelector.Next((int)DurationMinNum.Value, (int)DurationMaxNum.Value + 1));
                 llamadas.Enqueue(llamada);
-                AttendCall();
                 callsCounter++;
             }
             SimulateButton.Enabled = true;
         }
 
-        private void AttendCall()
+        private void AttendEnqueuedCalls()
         {
-            var agentesLibres = agentes.Select(i => !i.Ocupado);
-            if (agentesLibres.Count() > 0)
+            while (llamadas.Count > 0)
             {
-                int index = agentSelector.Next(0, agentes.Count);
-                agentesLibres.ToArray()[index] = llamadas.Dequeue();
+                int index = 0;
+                do
+                {
+                    index = agentSelector.Next(0, agentes.Count);
+                } while (agentes[index].Ocupado);
+
+                agentes[index].Llamada = llamadas.Dequeue();
+                agentes[index].Ocupado = true;
+                llamadasAtendidas.Add(agentes[index]);
+
+                EndCall(agentes[index]);
             }
-            else
-            {
-                AttendCall();
-            }
-            EndCall();
         }
 
-        private void EndCall()
+        private void EndCall(Agente agente)
         {
-            throw new NotImplementedException();
+            agente.Ocupado = false;
+        }
+
+        private void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            AttendEnqueuedCalls();
+        }
+
+        private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            DialogResult result =
+                MessageBox.Show(
+                    "Simulación terminada. ¿Desea ver los datos?", 
+                    "Mensaje del sistema", 
+                    MessageBoxButtons.YesNo, 
+                    MessageBoxIcon.Question, 
+                    MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Simulation-{DateTime.Now.Date.ToString("yyyy-MM-dd")}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.txt");
+                using (var writer = new StreamWriter(path, false))
+                {
+                    int linea = 1;
+                    writer.WriteLine("Simulador de Call Center");
+                    writer.WriteLine("No\t\tCategoría\t\tDuración\tAtendido por\t\tNivel");
+                    foreach (var agente in llamadasAtendidas)
+                    {
+                        writer.WriteLine($"{linea}\t\t{agente.Llamada.Categoria.Nombre}\t\t{agente.Llamada.Duracion}\t\tAgente {agente.Id}\t\t{agente.Nivel}");
+                        linea++;
+                    }
+                }
+                MessageBox.Show("Archivo generado con éxito en el escritorio.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Process.Start(path);
+            }
         }
     }
 }
