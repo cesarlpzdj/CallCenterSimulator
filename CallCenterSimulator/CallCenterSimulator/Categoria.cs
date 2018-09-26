@@ -7,13 +7,10 @@
 
         public int Nivel { get; set; }
 
-        public bool Incluir { get; set; }
-
-        public Categoria(string nombre, int nivel, bool incluir)
+        public Categoria(string nombre, int nivel)
         {
             Nombre = nombre;
             Nivel = nivel;
-            Incluir = incluir;
         }
     }
 }   

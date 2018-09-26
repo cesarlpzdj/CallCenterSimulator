@@ -14,15 +14,10 @@ namespace CallCenterSimulator
     {
         private Random categorySelector;
         private Random agentSelector;
-
-        private Categoria[] categorias;
-
-        private Agente[] agentes;
-
-        private Queue<Llamada> llamadas;
-
+        private List<Categoria> categorias;
+        private List<Agente> agentes;
         private List<Llamada> llamadasAtendidas;
-
+        private Queue<Llamada> llamadas;
         private int callsCounter = 0;
 
         public MainForm()
@@ -32,25 +27,54 @@ namespace CallCenterSimulator
 
         private void SimulateButton_Click(object sender, EventArgs e)
         {
+            if (!(DevoulcionesCheckBox.Checked || EntregasCheckBox.Checked || ExportacionesCheckBox.Checked || AclaracionesCheckBox.Checked))
+            if (!(Agente1CheckBox.Checked || Agente2CheckBox.Checked || Agente3CheckBox.Checked || Agente4CheckBox.Checked))
+            {
+                    MessageBox.Show("Seleccione al menos una categoria y un agente.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            SimulateButton.Enabled = false;
+
             llamadas = new Queue<Llamada>();
             llamadasAtendidas = new List<Llamada>();
 
-            categorias = new Categoria[4];
-            categorias[0] =
-                new Categoria("Devoluciones", 1, DevoulcionesCheckBox.Checked);
-            categorias[1] =
-                new Categoria("Exportaciones", 2, ExportacionesCheckBox.Checked);
-            categorias[2] =
-                new Categoria("Entregas", 1, EntregasCheckBox.Enabled);
-            categorias[3] =
-                new Categoria("Aclaraciones", 1, AclaracionesCheckBox.Checked);
+            categorias = new List<Categoria>();
 
-            agentes = new Agente[4];
+            if (DevoulcionesCheckBox.Checked)
+            {
+                categorias.Add(new Categoria("Devoluciones", 1));
+            }
+            if (ExportacionesCheckBox.Checked)
+            {
+                categorias.Add(new Categoria("Exportaciones", 2));
+            }
+            if (EntregasCheckBox.Checked)
+            {
+                categorias.Add(new Categoria("Entregas", 1));
+            }
+            if (AclaracionesCheckBox.Checked)
+            {
+                categorias.Add(new Categoria("Aclaraciones", 1));
+            }
 
-            agentes[0] = new Agente(1, 1, Agente1CheckBox.Checked);
-            agentes[1] = new Agente(2, 1, Agente2CheckBox.Checked);
-            agentes[2] = new Agente(3, 1, Agente3CheckBox.Checked);
-            agentes[3] = new Agente(4, 2, Agente4CheckBox.Checked);
+            agentes = new List<Agente>();
+
+            if (Agente1CheckBox.Checked)
+            {
+                agentes[0] = new Agente(1, 1);
+            }
+            if (Agente2CheckBox.Checked)
+            {
+                agentes.Add(new Agente(2, 1));
+            }
+            if (Agente3CheckBox.Checked)
+            {
+                agentes.Add(new Agente(3, 1));
+            }
+            if (Agente4CheckBox.Checked)
+            {
+                agentes.Add(new Agente(4, 2));
+            }
 
             int totalLlamadas = (int)NumberOfCallsNum.Value;
 
@@ -58,6 +82,7 @@ namespace CallCenterSimulator
             {
 
             }
+            SimulateButton.Enabled = true;
         }
 
         private void Call()
