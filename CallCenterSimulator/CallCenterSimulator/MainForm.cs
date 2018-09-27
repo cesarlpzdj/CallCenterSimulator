@@ -84,7 +84,6 @@ namespace CallCenterSimulator
 
             int totalLlamadas = (int)NumberOfCallsNum.Value;
 
-            worker.RunWorkerAsync();
 
             while (callsCounter <= totalLlamadas)
             {
@@ -93,6 +92,7 @@ namespace CallCenterSimulator
                 llamadas.Enqueue(llamada);
                 callsCounter++;
             }
+            worker.RunWorkerAsync();
             SimulateButton.Enabled = true;
         }
 
@@ -151,6 +151,7 @@ namespace CallCenterSimulator
                 MessageBox.Show("Archivo generado con éxito en el escritorio.", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Process.Start(path);
             }
+            callsCounter = 0;
         }
     }
 }
